@@ -13,6 +13,8 @@ Current box: [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64) 
 
 1. Create your own `data/` folder in the same direcotry of `Vagrantlife`, which will be synced to the `/vagrant_data` folder during `vagrant up` or `vagrant reload`.
 
+1. Change the username and email in `.gitconfig`.
+
 1. `cd Vagrantlife && vagrant up` Start the VM.
 
 1. `vagrant ssh` Connect to the VM terminal and start working.
