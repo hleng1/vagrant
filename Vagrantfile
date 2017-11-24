@@ -73,7 +73,7 @@ Vagrant.configure("2") do |config|
 	wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > /dev/null 2>&1
 	cd /home/ubuntu/.vim
 	wget https://raw.githubusercontent.com/Honpray/Vagrantlife/master/vimrc > /dev/null 2>&1
-	if [ ! -d /home/ubuntu/.vim/bundle ];
+	if [ ! -d /home/ubuntu/.vim/bundle/vim-autoclose ];
 	then
 		cd /home/ubuntu/.vim/bundle
 		git clone https://github.com/townk/vim-autoclose
