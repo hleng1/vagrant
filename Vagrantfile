@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder ".", "/vagrant", :mount_options => ['dmode=777,fmode=666']
+  config.vm.synced_folder ".", "/vagrant"
   
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -65,32 +65,6 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt-get install vim -y
-	mkdir -p /home/ubuntu/.vim/autoload /home/ubuntu/.vim/bundle
-	cd /home/ubuntu/.vim/autoload
-	wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > /dev/null 2>&1
-	cd /home/ubuntu/.vim
-	wget https://raw.githubusercontent.com/Honpray/Vagrantlife/master/vimrc > /dev/null 2>&1
-	if [ ! -d /home/ubuntu/.vim/bundle/vim-autoclose ];
-	then
-		cd /home/ubuntu/.vim/bundle
-		git clone https://github.com/townk/vim-autoclose
-		git clone https://github.com/alvan/vim-closetag
-		git clone https://github.com/junegunn/vim-easy-align
-		git clone https://github.com/yggdroot/indentline
-		git clone https://github.com/kchmck/vim-coffee-script
-		git clone https://github.com/anyakichi/vim-surround
-		git clone https://github.com/ervandew/supertab
-		git clone https://github.com/ddollar/nerdcommenter
-		git clone https://github.com/valloric/matchtagalways
-	fi
-	apt-get install git -y
-	git config --global user.name "Honpray"
-	git config --global user.email "hanbing.leng@sjsu.edu"
-	git config --global core.editor vim
-	apt-get install nodejs
-	apt-get install npm -y
-   SHELL
+  config.vm.provision "shell", path: "shell_provisioner/vim.sh"
+  config.vm.provision "shell", path: "shell_provisioner/npm_nodejs_mongo.sh"
 end
