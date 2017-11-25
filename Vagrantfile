@@ -67,4 +67,5 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "shell_provisioner/vim.sh"
   config.vm.provision "shell", path: "shell_provisioner/npm_nodejs_mongo.sh"
+  config.vm.provision "shell", path: "shell_provisioner/coffeescript.sh"
 end
