@@ -39,4 +39,8 @@ Current box: [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64) 
 1. npm & Node.js & MongoDB:
 `sudo service mongo start` to start MongoDB service.
 
-1. ~
+1. coffeescript
+
+1. Lua5.2
+
+1. Golang
