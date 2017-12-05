@@ -20,4 +20,5 @@ then
 	git clone https://github.com/ddollar/nerdcommenter
 	git clone https://github.com/valloric/matchtagalways
 	git clone https://github.com/briancollins/vim-jst
+	git clone https://github.com/kien/ctrlp.vim
 fi
