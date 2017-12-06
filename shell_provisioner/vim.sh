@@ -22,4 +22,5 @@ then
 	git clone https://github.com/briancollins/vim-jst
 	git clone https://github.com/kien/ctrlp.vim
 	git clone git://github.com/tpope/vim-vinegar.git
+	git clone https://github.com/rstacruz/sparkup
 fi
