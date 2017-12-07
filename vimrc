@@ -129,3 +129,6 @@ execute pathogen#infect()
 
 "vinegar will initialize with dot files hidden
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+"highlight cursorline
+set cul
