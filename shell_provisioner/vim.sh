@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/Honpray/Vagrantlife/master/vimrc > /dev/n
 if [ ! -d /home/ubuntu/.vim/bundle/vim-autoclose ];
 then
 	cd /home/ubuntu/.vim/bundle
-	git clone https://github.com/townk/vim-autoclose
+	git clone https://github.com/jiangmiao/auto-pairs
 	git clone https://github.com/alvan/vim-closetag
 	git clone https://github.com/junegunn/vim-easy-align
 	git clone https://github.com/yggdroot/indentline
