@@ -132,3 +132,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 "highlight cursorline
 set cul
+
+"set working directory to be the same as the current file
+set autochdir
