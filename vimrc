@@ -113,7 +113,7 @@ set smartindent
 
 filetype plugin indent on
 
-autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
+"autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
 
 "if has("gui_running")
 " GUI stuff in here
