@@ -131,7 +131,11 @@ execute pathogen#infect()
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 "highlight cursorline
-set cul
+"set cul
 
 "set working directory to be the same as the current file
 set autochdir
+
+"set clang-format integration
+map <C-K> :pyf ./clang-format.py<cr>
+imap <C-K> <c-o>:pyf ./clang-format.py<cr>
