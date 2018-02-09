@@ -24,4 +24,5 @@ then
 	git clone git://github.com/tpope/vim-vinegar.git
 	git clone https://github.com/rstacruz/sparkup
 	git clone https://github.com/pangloss/vim-javascript
+	git clone https://github.com/WolfgangMehner/lua-support
 fi
