@@ -41,8 +41,10 @@ Current box: [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64) 
 
 1. coffeescript
 
-1. Lua5.2
+1. Lua5.2 LuaJIT
 
 1. Golang
 
 1. GDB debugger
+
+1. CMake

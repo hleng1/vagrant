@@ -69,6 +69,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "shell_provisioner/npm_nodejs_mongo.sh"
   config.vm.provision "shell", path: "shell_provisioner/coffeescript.sh"
   config.vm.provision "shell", path: "shell_provisioner/gdb.sh"
-  config.vm.provision "shell", path: "shell_provisioner/lua.sh"
+  config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
   config.vm.provision "shell", path: "shell_provisioner/go.sh"
+  config.vm.provision "shell", path: "shell_provisioner/cmake.sh"
+  
 end
