@@ -2,6 +2,7 @@
 
 apt-get -y update
 apt-get install -y vim
+apt-get install -y clang-format
 mkdir -p /home/ubuntu/.vim/autoload /home/ubuntu/.vim/bundle
 cd /home/ubuntu/.vim/autoload
 wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > /dev/null 2>&1
