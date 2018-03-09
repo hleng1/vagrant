@@ -23,6 +23,8 @@ Current box: [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64) 
 
 1. `vagrant destroy` Destroys all resources that were created during the machine creation process.
 
+1. Use `sudo dpkg-reconfigure tzdata` to change the guest machine time zone lest make error happens.
+
 1. Port 80 on guest machine can be accessed at `localhost:8080`.
 
 1. More on [Vagrant Doc](https://www.vagrantup.com/docs/index.html).
@@ -39,9 +41,9 @@ Current box: [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64) 
 1. npm & Node.js & MongoDB:
 `sudo service mongo start` to start MongoDB service.
 
-1. coffeescript
+1. Coffeescript
 
-1. Lua5.2 LuaJIT
+1. Lua LuaJIT
 
 1. Golang
 
