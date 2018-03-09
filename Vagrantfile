@@ -72,5 +72,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
   config.vm.provision "shell", path: "shell_provisioner/go.sh"
   config.vm.provision "shell", path: "shell_provisioner/cmake.sh"
+  config.vm.provision "shell", path: "shell_provisioner/time_sync.sh"
   
 end
