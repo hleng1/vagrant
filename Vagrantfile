@@ -72,6 +72,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
   config.vm.provision "shell", path: "shell_provisioner/go.sh"
   config.vm.provision "shell", path: "shell_provisioner/cmake.sh"
-  # config.vm.provision "shell", path: "shell_provisioner/time_sync.sh"
-  
+  config.vm.provision "shell", path: "shell_provisioner/folder_path.sh"
+
+# Sync time on host wake-up within VirtualBox
+  config.vm.provider "virtualbox" do |vb|
+   vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
+end
 end
