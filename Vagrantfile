@@ -66,7 +66,7 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "shell_provisioner/vim.sh"
-  config.vm.provision "shell", path: "shell_provisioner/npm_nodejs_mongo.sh"
+  config.vm.provision "shell", path: "shell_provisioner/npm_nodejs_mongo_mysql.sh"
   config.vm.provision "shell", path: "shell_provisioner/coffeescript.sh"
   config.vm.provision "shell", path: "shell_provisioner/gdb.sh"
   config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
