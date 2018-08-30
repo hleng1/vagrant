@@ -139,3 +139,6 @@ set autochdir
 "set clang-format integration
 map <C-K> :pyf ./clang-format.py<cr>
 imap <C-K> <c-o>:pyf ./clang-format.py<cr>
+
+set number
+set cursorline
