@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  #config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -33,6 +33,7 @@ Vagrant.configure("2") do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", type: "dhcp"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -44,7 +45,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder ".", "/vagrant"
-  config.vm.synced_folder "../data", "/vagrant_data"
+  #config.vm.synced_folder "../data", "/vagrant_data"
   
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -69,13 +70,13 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "shell_provisioner/vim.sh"
   # config.vm.provision "shell", path: "shell_provisioner/coffeescript.sh"
   config.vm.provision "shell", path: "shell_provisioner/gdb.sh"
-  config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
-  config.vm.provision "shell", path: "shell_provisioner/go.sh"
+  #config.vm.provision "shell", path: "shell_provisioner/lua_luajit.sh"
+  #config.vm.provision "shell", path: "shell_provisioner/go.sh"
   config.vm.provision "shell", path: "shell_provisioner/cmake.sh"
-  config.vm.provision "shell", path: "shell_provisioner/folder_path.sh"
+  #config.vm.provision "shell", path: "shell_provisioner/folder_path.sh"
 
 # Sync time on host wake-up within VirtualBox
   config.vm.provider "virtualbox" do |vb|
    vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
-end
+  end
 end
