@@ -106,14 +106,15 @@ endif
 "Disable cursor blink.
 set gcr=a:blinkon0 
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set ai "auto indention
 set smartindent
 
 filetype plugin indent on
 
 "autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType lua setlocal expandtab shiftwidth=2 softtabstop=2
 
 "if has("gui_running")
 " GUI stuff in here
