@@ -115,7 +115,7 @@ filetype plugin indent on
 
 "autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType lua setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType go setlocal shiftwidth=2 tabstop=2
+autocmd FileType go setlocal shiftwidth=4 tabstop=4
 
 "if has("gui_running")
 " GUI stuff in here
