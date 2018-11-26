@@ -25,4 +25,5 @@ then
 	git clone https://github.com/rstacruz/sparkup
 	git clone https://github.com/pangloss/vim-javascript
 	git clone https://github.com/octol/vim-cpp-enhanced-highlight
+	git clone https://github.com/fatih/vim-go.git
 fi
